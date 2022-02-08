@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber a posição do elemento</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container{
+            padding-top: 20px;
+            padding-left: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: black;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="child"></div>
+        </div>
+        <div class="resultado"></div>
+    </main>
+
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        var filho = $(".child");
+        var res = $(".resultado");
+        var posicao = filho.position();
+        res.text(posicao.top,posicao.left);
+
+    </script>
+</body>
+</html>

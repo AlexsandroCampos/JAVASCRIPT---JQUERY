@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar dados com serialize</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form{
+            margin-top: 20px;
+        }
+        label{
+            display: block;
+            font-size: 1.5em;
+            font-weight:bold;
+            margin-bottom: 10px;
+        }
+        button{
+            display: block;
+            width: 100px;
+            height: 30px;
+            background-color: rgb(3, 173, 3);
+            font-weight: bold;
+        }
+        input{
+            width: 500px;
+            height: 40px;
+            margin-bottom: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Enviar dados com o serialize</h1>
+        <form action="#">
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="00000-000">
+            <label for="cep">Logradouro</label>
+            <input type="text" name="cep" id="cep" placeholder="Avenida exemplo de tal">
+            <button type="submit">Submeter</button>
+        </form>
+        <div class="resultado"></div>
+    </main>
+
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        var form = $("form");
+        var res = $(".resultado");
+
+        form.on("submit", function(event){
+            event.preventDefault();
+
+            var data = $(this).serialize();
+
+            res.text(data);
+        });
+    </script>
+</body>
+</html>
