@@ -1,2 +1,2 @@
 # JAVASCRIPT---JQUERY
-Minhas atividades de JavaScript e JQuery do curso de JavaScript (oferecido pelo IFRS)
+Minhas atividades realizadas durante o curso de JavaScript e JQuery (oferecido pelo IFRS)
